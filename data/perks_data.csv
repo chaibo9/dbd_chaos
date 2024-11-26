@@ -1,0 +1,271 @@
+ID,Perk,Image
+0,A Nurse's Calling,aNursesCalling.webp
+1,Ace in the Hole,aceInTheHole.webp
+2,Adrenaline,adrenaline.webp
+3,Aftercare,aftercare.webp
+4,Agitation,agitation.webp
+5,Alert,alert.webp
+6,Alien Instinct,alienInstinct.webp
+7,Any Means Necessary,anyMeansNecessary.webp
+8,Appraisal,appraisal.webp
+9,Autodidact,autodidact.webp
+10,Awakened Awareness,awakenedAwareness.webp
+11,Babysitter,babysitter.webp
+12,Background Player,backgroundPlayer.webp
+13,Balanced Landing,balancedLanding.webp
+14,Bamboozle,bamboozle.webp
+15,Barbecue & Chili,barbecueAndChilli.webp
+16,Bardic Inspiration,bardicInspiration.webp
+17,Batteries Included,batteriesIncluded.webp
+18,Beast of Prey,beastOfPrey.webp
+19,Better Than New,betterThanNew.webp
+20,Better Together,betterTogether.webp
+21,Bite the Bullet,biteTheBullet.webp
+22,Bitter Murmur,bitterMurmur.webp
+23,Blast Mine,blastMine.webp
+24,Blood Echo,bloodEcho.webp
+25,Blood Pact,bloodPact.webp
+26,Blood Rush,bloodRush.webp
+27,Blood Warden,bloodWarden.webp
+28,Bloodhound,bloodhound.webp
+29,Boil Over,boilOver.webp
+30,Bond,bond.webp
+31,Boon: Circle of Healing,boonCircleOfHealing.webp
+32,Boon: Dark Theory,boonDarkTheory.webp
+33,Boon: Exponential,boonExponential.webp
+34,Boon: Illumination,boonIllumination.webp
+35,Boon: Shadow Step,boomShadowStep.webp
+36,Borrowed Time,borrowedTime.webp
+37,Botany Knowledge,botanyKnowledge.webp
+38,Breakdown,breakdown.webp
+39,Breakout,breakout.webp
+40,Brutal Strength,brutalStrength.webp
+41,Buckle Up,buckeUp.webp
+42,Built to Last,builtToLaste.webp
+43,Call of Brine,callOfBrine.webp
+44,Calm Spirit,calmSpirit.webp
+45,Camaraderie,camaraderie.webp
+46,Champion of Light,championOfLight.webp
+47,Chemical Trap,chemicalTrap.webp
+48,Clairvoyance,clairvoyance.webp
+49,Corrective Action,correctiveAction.webp
+50,Corrupt Intervention,corruptIntervention.webp
+51,Coulrophobia,coulrophobia.webp
+52,Counterforce,counterforce.webp
+53,Coup de Grâce,coupDeGrace.webp
+54,Cruel Limits,cruelLimits.webp
+55,Cut Loose,cutLoose.webp
+56,Dance With Me,danceWithMe.webp
+57,Dark Arrogance,darkArrogance.webp
+58,Dark Devotion,darkDevotion.webp
+59,Dark Sense,darkSense.webp
+60,Darkness Revealed,darknessRevealed.webp
+61,Dead Hard,deadHard.webp
+62,Dead Man's Switch,deadMansSwitch.webp
+63,Deadline,deadline.webp
+64,Deadlock,deadlock.webp
+65,Deathbound,deathbound.webp
+66,Deception,deception.webp
+67,Decisive Strike,decisiveStrike.webp
+68,Deerstalker,deerstalker.webp
+69,Deja Vu,dejaVu.webp
+70,Deliverance,deliverance.webp
+71,Desperate Measures,desperateMeasures.webp
+72,Detective's Hunch,detectivesHunch.webp
+73,Discordance,disordance.webp
+74,Dissolution,dissolution.webp
+75,Distortion,distortion.webp
+76,Distressing,distressing.webp
+77,Diversion,diversion.webp
+78,Dominance,dominance.webp
+79,Dragon's Grip,dragonsGrip.web
+80,Dramaturgy,dramaturgy.webp
+81,Dying Light,dylingLight.webp
+82,Empathic Connection,empathicConnection.webp
+83,Empathy,empathy.webp
+84,Enduring,enduring.webp
+85,Eruption,eruption.webp
+86,Exultation,exultation.webp
+87,Eyes of Belmont,eyesOfBelmont.webp
+88,Fast Track,fastTrack.webp
+89,Finesse,finesse.webp
+90,Fire Up,fireUp.webp
+91,Fixated,fixated.webp
+92,Flashbang,flashbang.webp
+93,Flip-Flop,flip-Flop.webp
+94,Fogwise,fogwise.webp
+95,For the People,forThePeople.webp
+96,Forced Hesitation,forcedHesitation.webp
+97,Forced Penance,forcedPenance.webp
+98,Franklin's Demise,franklinsDemise.webp
+99,Friendly Competition,friendlyCompetition.webp
+100,Friends ‘Til the End,friendsTilTheEnd.webp
+101,Furtive Chase,furtiveChase.webp
+102,Game Afoot,gameAfoot.webp
+103,Gearhead,gearhead.webp
+104,Genetic Limits,geneticLimits.webp
+105,Grim Embrace,grimEmbrace.webp
+106,Hardened,hardened.webp
+107,Head On,headOn.webp
+108,Hex: Blood Favor,hexBloodFavour.webp
+109,Hex: Crowd Control,hexCrowdControl.webp
+110,Hex: Devour Hope,hexDevourHope.webp
+111,Hex: Face the Darkness,hexFaceTheDarkness.webp
+112,Hex: Haunted Ground,hexHauntedGround.webp
+113,Hex: Huntress Lullaby,hexHuntressLullaby.webp
+114,Hex: No One Escapes Death,hexNoOneEscapesDeath.webp
+115,Hex: Pentimento,hexPentimento.webp
+116,Hex: Plaything,hexPlaything.webp
+117,Hex: Retribution,hexRetribution.webp
+118,Hex: Ruin,hexRuin.webp
+119,Hex: The Third Seal,hexTheThirdSeal.webp
+120,Hex: Thrill of the Hunt,hexThrillOfTheHunt.webp
+121,Hex: Two Can Play,hexTwoCanPlay.webp
+122,Hex: Undying,hexUndying.webp
+123,Hex: Wretched Fate,hexWretchedFate.webp
+124,Hoarder,hoarder.webp
+125,Hope,hope.webp
+126,Hubris,hubris.webp
+127,Human Greed,humanGreed.webp
+128,Hyperfocus,hyperfocus.webp
+129,Hysteria,hysteria.webp
+130,I'm All Ears,imAllEars.webp
+131,Infectious Fright,infectiousFright.webp
+132,Inner Focus,innerFocus.webp
+133,Inner Strength,innerStrength.webp
+134,Insidious,insidious.webp
+135,Invocation: Weaving Spiders,invocationWeavingSpiders.webp
+136,Iron Grasp,ironGrasp.webp
+137,Iron Maiden,ironMaiden.webp
+138,Iron Will,ironWill.webp
+139,Kindred,kindred.webp
+140,Knock Out,knockOut.webp
+141,Languid Touch,languidTouch.webp
+142,Leader,leader.webp
+143,Left Behind,leftBehind.webp
+144,Lethal Pursuer,lethalPursuer.webp
+145,Leverage,leverage.webp
+146,Light-footed,light-Footed.webp
+147,Lightborn,lightborn.webp
+148,Lightweight,lightweight.webp
+149,Lithe,lithe.webp
+150,Low Profile,lowProfile.webp
+151,Lucky Break,luckyBreak.webp
+152,Lucky Star,luckyStar.webp
+153,Machine Learning,machineLearning.webp
+154,Mad Grit,madGrit.webp
+155,Made for This,madeForThis.webp
+156,Make Your Choice,makeYourChoice.webp
+157,Merciless Storm,mercilessStorm.webp
+158,Mettle of Man,mettleOfMan.webp
+159,Mindbreaker,mindbreaker.webp
+160,Mirrored Illusion,mirroredIllusion.webp
+161,Moment of Glory,momentOfGlory.webp
+162,Monitor & Abuse,monitorAndAbuse.webp
+163,Nemesis,nemesis.webp
+164,No Mither,noMither.webp
+165,No One Left Behind,noOneLeftBehind.webp
+166,No Way Out,noWayOut.webp
+167,Nowhere to Hide,nowhereToHide.webp
+168,Object of Obsession,objectOfObsession.webp
+169,Off the Record,offTheRecord.webp
+170,Open-Handed,open-Handed.webp
+171,Oppression,oppression.webp
+172,Overcharge,overcharge.webp
+173,Overcome,overcome.webp
+174,Overwhelming Presence,overwhelmingPresence.webp
+175,Overzealous,overzealous.webp
+176,Parental Guidance,parentalGuidance.webp
+177,Pharmacy,pharmacy.webp
+178,Play With Your Food,playWithYourFood.webp
+179,Plot Twist,plotTwist.webp
+180,Plunderer's Instinct,plunderersInstinct.webp
+181,Poised,poised.webp
+182,Pop Goes the Weasel,popGoesTheWeasel.webp
+183,Potential Energy,potentialEnergy.webp
+184,Power Struggle,powerStruggle.webp
+185,Predator,predator.webp
+186,Premonition,premonition.webp
+187,Prove Thyself,proveThyself.webp
+188,Quick & Quiet,quickAndQuiet.webp
+189,Quick Gambit,quickGambit.webp
+190,Rancor,rancor.webp
+191,Rapid Brutality,rapidBrutality.webp
+192,Reactive Healing,reactiveHealing.webp
+193,Reassurance,reassurance.webp
+194,Red Herring,redHerring.webp
+195,Remember Me,rememberMe.webp
+196,Repressed Alliance,repressedAlliance.webp
+197,Residual Manifest,residualManifest.webp
+198,Resilience,resilience.webp
+199,Resurgence,resurgence.webp
+200,Rookie Spirit,rookieSpirit.webp
+201,Saboteur,saboteur.webp
+202,Save the Best for Last,saveTheBestForLast.webp
+203,Scavenger,scavenger.webp
+204,Scene Partner,scenePartner.webp
+205,Scourge Hook: Floods of Rage,scourgeHookFloodsOfRage.webp
+206,Scourge Hook: Gift of Pain,scourgeHookGiftOfPain.webp
+207,Scourge Hook: Hangman's Trick,scourgeHookHangmansTrick.webp
+208,Scourge Hook: Monstrous Shrine,scourgeHookMonstrousShrine.webp
+209,Scourge Hook: Pain Resonance,scourgeHookPainResonance.webp
+210,Second Wind,secondWind.webp
+211,Self-Care,self-Care.webp
+212,Self-Preservation,self-Preservation.webp
+213,Septic Touch,septicTouch.webp
+214,Shadowborn,shadowborn.webp
+215,Shattered Hope,shatteredHope.webp
+216,Slippery Meat,slipperyMeat.webp
+217,Sloppy Butcher,sloppyButcher.webp
+218,Small Game,smallGame.webp
+219,Smash Hit,smashHit.webp
+220,Sole Survivor,soleSurvivor.webp
+221,Solidarity,solidarity.webp
+222,Soul Guard,soulGuard.webp
+223,Specialist,specialist.webp
+224,Spies from the Shadows,spiesFromTheShadows.webp
+225,Spine Chill,spineChill.webp
+226,Spirit Fury,spiritFury.webp
+227,Sprint Burst,sprintBurst.webp
+228,Stake Out,stakeOut.webp
+229,Starstruck,starstruck.webp
+230,Still Sight,stillSight.webp
+231,Streetwise,streetwise.webp
+232,Strength in Shadows,strengthInShadows.webp
+233,Stridor,stridor.webp
+234,Superior Anatomy,superiorAnatomy.webp
+235,Surge,surge.webp
+236,Surveillance,surveillance.webp
+237,Teamwork: Collective Stealth,teamworkCollectiveStealth.webp
+238,Teamwork: Power of Two,teamworkPowerOfTwo.webp
+239,Technician,technician.webp
+240,Tenacity,tenacity.webp
+241,Terminus,terminus.webp
+242,Territorial Imperative,territorialImperative.webp
+243,Thanatophobia,thantophobia.webp
+244,This Is Not Happening,thisIsNotHappening.webp
+245,Thrilling Tremors,thrillingTremors.webp
+246,THWACK!,thwack.webp
+247,Tinkerer,tinkerer.webp
+248,Trail of Torment,trailOfTorment.webp
+249,Troubleshooter,troubleshooter.webp
+250,Ultimate Weapon,ultimateWeapon.webp
+251,Unbound,unbound.webp
+252,Unbreakable,unbreakable.webp
+253,Undone,undone.webp
+254,Unforeseen,unforeseen.webp
+255,Unnerving Presence,unnervingPresence.webp
+256,Unrelenting,unrelenting.webp
+257,Up the Ante,upTheAnte.webp
+258,Urban Evasion,urbanEvasion.webp
+259,Vigil,vigil.webp
+260,Visionary,visionary.webp
+261,Wake Up!,wakeUp.webp
+262,We'll Make It,weaveAttunement.webp
+263,We're Gonna Live Forever,wellMakeIt.webp
+264,Weave Attunement,wereGonnaLiveForever.webp
+265,Whispers,whispers.webp
+266,Wicked,wicked.webp
+267,Windows of Opportunity,windowsOfOpportunity.webp
+268,Wiretap,wiretap.webp
+269,Zanshin Tactics,zanshinTactics.webp

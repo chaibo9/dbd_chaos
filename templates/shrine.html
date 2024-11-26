@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shrine of secrets - chaibo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{{url_for("static", filename="shrine.css")}}">
+</head>
+
+<video playsinline autoplay loop muted id ="shrine_bg">
+    <source src="{{ url_for('static', filename='backgrounds/campfire.mp4') }}">
+    Your browser does not support HTML5 video.
+</video>
+<body>
+    <div class = "shrine-container">
+        <div class="perks">
+            {% if perks %}
+                {% for perk in perks %}
+                    <div class="perk" data-title="{{perk.name}}" data-character="{{perk.character}}">
+                        <img src="{{ url_for('static', filename='perks/' ~ perk.image) }}" alt="{{ perk.name }}", title="{{ perk.name }}">
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No perks available at the moment.</p>
+            {% endif %}
+        </div>
+        <div id="countdown"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='countdown.js') }}"></script>
+
+    <a href = "https://discord.com/oauth2/authorize?client_id=1310334123990188032" target = "_blank">
+        <div class = "discord-bot">
+            <p><img src = "static/icons/discord.svg">Invite our discord bot here!</p>
+        </div>
+    </a>
+</body>
+</html>

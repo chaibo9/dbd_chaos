@@ -1,0 +1,144 @@
+/* shrine.css */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+    padding: 50px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+#shrine_bg {
+    background-color: black;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+    filter: brightness(70%);
+  }
+
+#countdown {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.perks {
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px; /* Adjust size as needed */
+    height: 450px; /* Adjust size as needed */
+    position: absolute;
+    background-size: cover; /* Ensure the background covers the entire area */
+    background-position: center; /* Center the background image */
+    transform: rotate(45deg); /* Rotate the container */
+    margin: auto; /* Center the box */
+    padding: 20px; /* Optional: Add padding for better spacing */
+    overflow: visible;
+}
+
+
+.perk {
+    width: 50%; /* Half of the container */
+    height: 50%; /* Half of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg); /* Rotate the perk back to keep it upright */
+    background-image: url('../static/perks_bg/very_rare.png'); /* Background image always visible */
+    background-size: cover; /* Ensure the background covers the entire area */
+    background-position: center; /* Center the background image */
+    position: relative; /* Allow absolute positioning for inner img */
+    transition: transform 0.1s ease; /* Smooth transition */
+    overflow: visible;
+    z-index: 1;
+
+    img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain; /* Maintain aspect ratio of the images */
+    }
+
+    &::after {
+        content: attr(data-title) " - " attr(data-character);
+        visibility: hidden;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        z-index: 2;
+        bottom: 105%; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        text-transform: uppercase; /* Make the text all uppercase */
+        white-space: nowrap;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover::after,
+    &:hover::before {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+/* Hover effect: scale while preserving the rotation */
+.perk:hover {
+    transform: rotate(-45deg) scale(1.1); /* Keep the -45deg rotation and scale up */
+    background-size: 110%; /* Scale the background image slightly */
+}
+
+.perk:hover ~ .perk {
+    filter: brightness(50%);
+}
+
+.perks:hover .perk:not(:hover) {
+    filter: brightness(50%);
+}
+
+.perk:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.perk:nth-child(2) {
+    top: 0;
+    right: 0;
+}
+
+.perk:nth-child(3) {
+    bottom: 0;
+    left: 0;
+}
+
+.perk:nth-child(4) {
+    bottom: 0;
+    right: 0;
+}
