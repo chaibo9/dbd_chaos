@@ -84,7 +84,7 @@ def create_perk_image(perks):
     background = Image.open("static/perks_bg/sos_bg.jpg")
 
     # Define the positions for the perk logos
-    positions = [(82, 161), (425, 161), (82, 495), (425, 495)]
+    positions = [(77, 161), (420, 161), (77, 495), (420, 495)]
 
     # Paste the perk logos onto the background
     for i, perk in enumerate(perks):
@@ -92,7 +92,7 @@ def create_perk_image(perks):
             perk_image_path = os.path.join("static", "perks", perk['image'])
             print(f"Loading perk image from: {perk_image_path}")  # Debugging statement
             perk_image = Image.open(perk_image_path)
-            perk_image = perk_image.resize((250,250))  # Resize the perk image
+            perk_image = perk_image.resize((300,300))  # Resize the perk image
             background.paste(perk_image, positions[i], perk_image)
 
     # Save the resulting image
@@ -107,6 +107,7 @@ def run_discord_bot():
     @client.event
     async def on_ready():
         await client.tree.sync() # sync global commands
+        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='/shrine'))
         print(f'Logged in as {client.user}')
         print("---------------------------")
 
@@ -153,7 +154,7 @@ def run_discord_bot():
         else:
             await ctx.send("Failed to fetch the Shrine of Secrets perks.")
 
-    client.run("MTMxMDMzNDEyMzk5MDE4ODAzMg.GU6LSP.n2e5EIzKMd0S_eQfnlkpcIhb3awa2CMpXuwoE8")
+    client.run("MTMxMDMzNDEyMzk5MDE4ODAzMg.G6byoi.UniCASsqST0dbulPDvVJHTSlgOZx72BDNmW1Qo")
 
 # Start both the Flask server and the Discord bot concurrently
 if __name__ == '__main__':

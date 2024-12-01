@@ -53,7 +53,7 @@ body, html {
   background-position: center; /* Center the background image */
   transform: rotate(45deg); /* Rotate the container */
   margin: auto; /* Center the box */
-  padding: 70px; /* Optional: Add padding for better spacing */
+  padding: 100px; /* Optional: Add padding for better spacing */
   overflow: visible;
 }
 
@@ -64,7 +64,6 @@ body, html {
   justify-content: center;
   align-items: center;
   transform: rotate(-45deg); /* Rotate the perk back to keep it upright */
-  background-image: url("../static/perks_bg/very_rare.png"); /* Background image always visible */
   background-size: cover; /* Ensure the background covers the entire area */
   background-position: center; /* Center the background image */
   position: relative; /* Allow absolute positioning for inner img */
@@ -73,8 +72,8 @@ body, html {
   z-index: 1;
 }
 .perk img {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   -o-object-fit: contain;
      object-fit: contain; /* Maintain aspect ratio of the images */
 }
@@ -117,7 +116,6 @@ body, html {
 /* Hover effect: scale while preserving the rotation */
 .perk:hover {
   transform: rotate(-45deg) scale(1.1); /* Keep the -45deg rotation and scale up */
-  background-size: 110%; /* Scale the background image slightly */
 }
 
 .perk:hover ~ .perk {
