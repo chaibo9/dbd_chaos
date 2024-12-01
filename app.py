@@ -77,7 +77,7 @@ def start_scheduler():
 def run_flask():
     fetch_and_update_perks()  # Initial call to fetch data
     start_scheduler()  # Start scheduler for daily updates
-    app.run(debug=True,use_reloader=False)
+    app.run(host='0.0.0.0')
 
 def create_perk_image(perks):
     # Load the background image
@@ -160,5 +160,5 @@ def run_discord_bot():
 if __name__ == '__main__':
     discord_thread = threading.Thread(target=run_discord_bot, daemon=True)
     discord_thread.start()
-    time.sleep(3)
+    time.sleep(1)
     run_flask()  # Run Flask in the main thread
