@@ -10,6 +10,7 @@ from PIL import Image
 import os
 from datetime import datetime
 import time
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -72,12 +73,6 @@ def start_scheduler():
     # Schedule the task to run every day at 3:00 PM UTC (adjust the time as needed)
     scheduler.add_job(fetch_and_update_perks, 'cron', hour=15, minute=1)
     scheduler.start()
-
-# Function to run the Flask server
-def run_flask():
-    fetch_and_update_perks()  # Initial call to fetch data
-    start_scheduler()  # Start scheduler for daily updates
-    app.run(debug=True,use_reloader=False)
 
 def create_perk_image(perks):
     # Load the background image
@@ -156,9 +151,14 @@ def run_discord_bot():
 
     client.run("MTMxMDMzNDEyMzk5MDE4ODAzMg.G6byoi.UniCASsqST0dbulPDvVJHTSlgOZx72BDNmW1Qo")
 
+# Function to run the Flask server
+def run_flask():
+    fetch_and_update_perks()  # Initial call to fetch data
+    start_scheduler()  # Start scheduler for daily updates
+    serve(app, host='0.0.0.0', port=5000)
+
 # Start both the Flask server and the Discord bot concurrently
 if __name__ == '__main__':
     discord_thread = threading.Thread(target=run_discord_bot, daemon=True)
     discord_thread.start()
-    time.sleep(3)
     run_flask()  # Run Flask in the main thread
