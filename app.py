@@ -16,7 +16,7 @@ from flask_session import Session
 app = Flask(__name__)
 
 #config
-app.secret_key = "TW3runB5HCB2tZ8eNQp0kMc4no5sXyVk"
+app.secret_key = "insert key"
 app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
@@ -371,7 +371,7 @@ def run_discord_bot():
                 # Fetch the bot's custom emojis
                 emoji_response = requests.get(
                     'https://discord.com/api/applications/1310334123990188032/emojis',
-                    headers={'Authorization': 'MTMxMDMzNDEyMzk5MDE4ODAzMg.G6byoi.UniCASsqST0dbulPDvVJHTSlgOZx72BDNmW1Qo'}
+                    headers={'Authorization': STEAM_API_KEY}
                 )
                 
 
