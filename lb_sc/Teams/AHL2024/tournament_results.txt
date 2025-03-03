@@ -1,0 +1,45 @@
+Final ELO Ratings:
+================
+Rank | Team         | Rating
+-----------------------------------
+   1 | Elysium      | 1214
+   2 | Calamity     | 1121
+   3 | Eternal      | 1035
+   4 | Oracle       | 1015
+   5 | Severance    |  993
+   6 | The Valentines |  988
+   7 | Eclipse      |  986
+   8 | Rapture      |  979
+   9 | Eunoia       |  976
+  10 | Misery       |  974
+  11 | Renaissance  |  969
+  12 | Catalyst     |  969
+  13 | Kitchaze     |  951
+  14 | Infinity     |  948
+  15 | Cynic        |  938
+  16 | Loyalty      |  937
+
+
+-- SQL Insert Statements:
+-- Generated on 2024-12-31 16:54:44
+
+-- Delete existing data
+DELETE FROM results;
+
+-- Insert new data
+INSERT INTO results (rank, team_name, elo) VALUES (1, 'Elysium', 1214);
+INSERT INTO results (rank, team_name, elo) VALUES (2, 'Calamity', 1121);
+INSERT INTO results (rank, team_name, elo) VALUES (3, 'Eternal', 1035);
+INSERT INTO results (rank, team_name, elo) VALUES (4, 'Oracle', 1015);
+INSERT INTO results (rank, team_name, elo) VALUES (5, 'Severance', 993);
+INSERT INTO results (rank, team_name, elo) VALUES (6, 'The Valentines', 988);
+INSERT INTO results (rank, team_name, elo) VALUES (7, 'Eclipse', 986);
+INSERT INTO results (rank, team_name, elo) VALUES (8, 'Rapture', 979);
+INSERT INTO results (rank, team_name, elo) VALUES (9, 'Eunoia', 976);
+INSERT INTO results (rank, team_name, elo) VALUES (10, 'Misery', 974);
+INSERT INTO results (rank, team_name, elo) VALUES (11, 'Renaissance', 969);
+INSERT INTO results (rank, team_name, elo) VALUES (12, 'Catalyst', 969);
+INSERT INTO results (rank, team_name, elo) VALUES (13, 'Kitchaze', 951);
+INSERT INTO results (rank, team_name, elo) VALUES (14, 'Infinity', 948);
+INSERT INTO results (rank, team_name, elo) VALUES (15, 'Cynic', 938);
+INSERT INTO results (rank, team_name, elo) VALUES (16, 'Loyalty', 937);

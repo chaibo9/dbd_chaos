@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user_info.personaname }}'s Profile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile/profile.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='home/images/chaos-logo-t.png') }}" type="image/png">
+</head>
+<body>
+    {% extends "includes/navbar.html" %}
+    {% block content %}
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='home/images/headerpic.jpeg') }}" alt="Hero Image">
+        <div class="hero-text">
+          <div class="hero-title">PROFILE</div>
+        </div>
+    </div>
+
+    <div class="profile-wrapper">
+        <div class="profile-topliner">
+            <h1>{{ user_info.personaname }}</h1>
+        </div>
+    
+        <div class="profile-main">
+            <div class="profile-container">
+                <!-- Profile Header -->
+                <div class="profile-header {% if user_role %}{{ user_role|lower }}{% endif %}">
+                    <img src="{{ user_info.avatarfull }}" alt="{{ user_info.personaname }}'s avatar" class="profile-avatar">
+                    <div class="profile-name">
+                        <h2>{{ user_info.personaname }}</h2>
+                        {% if user_role %}
+                        <div class="role-tag {{ user_role|lower }}">{{ user_role }}</div>
+                        {% else %}
+                        <div class="role-tag user">User</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class = "profile-content">
+                <div class="profile-buttons-wrapper">
+                    <div class="profile-buttons">
+                        <input type="radio" id="statistics-radio" name="toggle" checked>
+                        <label for="statistics-radio" class="toggle-button">STATISTICS</label>
+                        <input type="radio" id="competitive-radio" name="toggle">
+                        <label for="competitive-radio" class="toggle-button">COMPETITIVE</label>
+                    </div>
+                </div>
+
+                 <div class="info-box-container">
+                    <div class="info-box">
+                        <h3>HOURS</h3>
+                        <p><strong>{{ user_info.playtime_forever }} HOURS</strong> PLAYED</p>
+                        <p><strong>{{ user_info.playtime_2weeks }} HOURS</strong> (last 2 weeks)</p>
+                        <p><strong>Last Played:</strong> {{ user_info.last_played }}</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>GENERAL</h3>
+                        <p><strong>Total Bloodpoints Earned:</strong> {{ user_info.DBD_BloodwebPoints }}</p>
+                        <p><strong>Max Points spent on a character:</strong> {{ user_info.DBD_MaxBloodwebPointsOneCategory }}</p>
+                        <p><strong>Highest Prestige Level:</strong> {{ user_info.DBD_BloodwebMaxPrestigeLevel }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,175 @@
+:root {
+    --theme-color: #8a2be2; /* theme color */
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #14161B;
+    color: #fff;
+}
+
+/* Hero Image Styles */
+.hero-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    filter: brightness(50%);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* leaderboard */
+
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leaderboard-tables {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.leaderboard {
+    align-items: left;
+    width: 50%;
+    max-width: 900px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.leaderboard h1 {
+    text-align: center;
+    font-size: 2.0rem;
+    color: rgba(255, 255, 255, 0.829);
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #9311e9, transparent 80%);
+    z-index: -1;
+}
+
+.leaderboard h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.829);
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #11dbe941, transparent 80%);
+    z-index: -1;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0 10px;
+    font-size: 1.2rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 0px 10px;
+}
+
+th {
+    color: #767D88;
+    font-size: 1.0rem;
+    top: 0;
+    z-index: 1;
+}
+
+td {
+    font-weight: bold;
+    background-color: #111216;
+    padding: 10px;
+    color: #ddd;
+}
+
+.rank {
+    text-align: left;
+    color: #767D88;
+}
+
+.points {
+    text-align: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    table {
+        font-size: 1.1rem;
+    }
+
+    th, td {
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    table {
+        font-size: 1rem;
+    }
+
+    th, td {
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .leaderboard-tables {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leaderboard {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 6px 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 4px 8px;
+    }
+}

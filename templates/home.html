@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.dbdchaos.com/" />
+  <meta property="og:title" content="Chaos | Home" />
+  <meta property="og:description" content="Chaos - The #1 Dead by Daylight Competitive Tracker. Keep up with teams and tournaments!"/>
+  <meta property="og:image" content="{{ url_for('static', filename='icons/bot logo.jpg') }}"/>
+  <meta name="theme-color" content="#69359c">
+  <title>Home | Chaos</title>
+  <link rel="icon" href="{{ url_for('static', filename='home/images/chaos-logo-t.png') }}" type="image/png">
+  <link rel="stylesheet" href="{{url_for("static", filename="home/home.css")}}">
+</head>
+<body>
+  {% extends "includes/navbar.html" %}
+  {% block content %}
+  <div class="hero-image">
+    <img src="{{ url_for('static', filename='home/images/headerpic.jpeg') }}" alt="Hero Image">
+    <div class="hero-text">
+      <div class="hero-title">CHAOS</div>
+      <div class="hero-subtitle">COMPETITIVE DEAD BY DAYLIGHT</div>
+    </div>
+  </div>
+
+  <div class="leaderboard-container">
+    <div class = "title-container">
+      <h1 class="title">Top ELO</h1>
+      <img src="{{ url_for('static', filename='home/images/dbdleague.png') }}" alt="DBDLeague Logo" class="dbdleague-logo">
+    </div>
+    <div class="leaderboard-tables">
+        <div class="leaderboard">
+            <h1>1V1</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th class="wins">Wins</th>
+                        <th class="points">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player in top_3_1v1 %}
+                    <tr>
+                        <td class="rank">#{{ loop.index }}</td>
+                        <td>{{ player[0] }}</td>
+                        <td>{{ player[1] }}</td>
+                        <td class="points">{{ player[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="leaderboard">
+            <h1>4V1</h1>
+            <h2>{{ tournament_name }}</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Team</th>
+                        <th class="wins">ELO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for team in top_3_4v1 %}
+                    <tr>
+                        <td class="rank">#{{ team[0] }}</td>
+                        <td>{{ team[1] }}</td>
+                        <td class="elo">{{ team[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+  {% endblock %}
+</body>
+
+</html>

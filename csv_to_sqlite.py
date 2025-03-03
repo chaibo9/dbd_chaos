@@ -1,15 +1,15 @@
 import pandas as pd
 import sqlite3
 
-# Load the CSV file into a pandas DataFrame
-csv_file = 'data/perks_data.csv'  # Path to your downloaded CSV file
+# load csv file
+csv_file = 'data/perks_data.csv'  # path
 df = pd.read_csv(csv_file)
 
-# Connect to SQLite database (or create it if it doesn't exist)
+# connect/create db
 conn = sqlite3.connect('perks.db')
 c = conn.cursor()
 
-# Create a table for perks data (if it doesn't already exist)
+# table if not existed already
 c.execute('''
 CREATE TABLE IF NOT EXISTS perks (
     perk_id INTEGER PRIMARY KEY,     -- Use perk_id as the primary key
@@ -18,12 +18,12 @@ CREATE TABLE IF NOT EXISTS perks (
 )
 ''')
 
-# Insert data from DataFrame into SQLite table
+# insert data from DataFrame into SQLite
 for _, row in df.iterrows():
     c.execute('INSERT INTO perks (perk_id, perk_name, image_filename) VALUES (?, ?, ?)', 
               (row['ID'], row['Perk'], row['Image']))
 
-# Commit and close the connection
+# close
 conn.commit()
 conn.close()
 

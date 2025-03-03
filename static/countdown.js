@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const hourOfDay = now.getUTCHours();
         const minuteOfHour = now.getUTCMinutes();
 
-        // Calculate the number of days until next Tuesday
+        // calculate the number of days until next Tuesday
         let daysUntilTuesday = (9 - dayOfWeek) % 7; // 0 if today is Tuesday
         const isTodayTuesday = dayOfWeek === 2;
 
-        // If today is Tuesday but it's past 15:01 UTC, target next Tuesday
+        // if today is Tuesday but it's past 15:01 UTC, target next Tuesday
         if (isTodayTuesday && (hourOfDay > 15 || (hourOfDay === 15 && minuteOfHour >= 1))) {
-            daysUntilTuesday = 7; // Move to the next Tuesday
+            daysUntilTuesday = 7; // next Tuesday
         }
 
         const nextTuesday = new Date(now);
@@ -25,29 +25,29 @@ document.addEventListener('DOMContentLoaded', function () {
         const nextTuesday = getNextTuesday3PM();
         const timeRemaining = nextTuesday - now;
 
-        // Calculate days, hours, minutes, and seconds
+        // calc days, hours, minutes, and seconds
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        // Update the countdown element
+
         document.getElementById('countdown').innerHTML =
             `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-        // Handle expiration and reset
+        // handle expiration and reset
         if (timeRemaining <= 0) {
             clearInterval(countdownInterval);
             document.getElementById('countdown').innerHTML = "RESETTING...";
             setTimeout(() => {
-                // Restart countdown after a small delay
+                // restart countdown after small delay
                 updateCountdown();
                 countdownInterval = setInterval(updateCountdown, 1000); // Reinitialize
             }, 1000);
         }
     }
 
-    // Initialize the countdown
-    let countdownInterval = setInterval(updateCountdown, 1000); // Update every second
-    updateCountdown(); // Initial call to display the countdown immediately
+    // initialize the countdown
+    let countdownInterval = setInterval(updateCountdown, 1000); // update every second
+    updateCountdown(); // initial call to display the countdown
 });

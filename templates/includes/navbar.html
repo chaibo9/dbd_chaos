@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar/navbar.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="flash-messages">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert {{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      </div>
+      <script>
+        // Function to hide flash messages after 3 seconds
+        setTimeout(function () {
+          var flashMessages = document.querySelectorAll('.flash-messages .alert');
+          flashMessages.forEach(function (message) {
+            message.classList.add('hide');
+          });
+        }, 3000); // 3 seconds
+      </script>
+
+<nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+        <a href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='home/images/chaos-logo-t.png') }}" alt="Chaos Logo">
+        </a>
+        <span>CHAOS</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-links desktop-nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="{{url_for('leaderboards')}}">LEADERBOARDS</a></li>
+        <li><a href="{{url_for('staff')}}">STAFF</a></li>
+        <li><a href="{{url_for('shrine_of_secrets')}}">SHRINE</a></li>
+        <li><a href="#">STORE</a></li>
+      </ul>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <button class="hamburger" onclick="toggleMobileNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Add after navbar -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMobileNav()">×</button>
+        <div class="mobile-menu-content">
+          <a href="/">HOME</a>
+          <a href="{{url_for('leaderboards')}}">LEADERBOARDS</a>
+          <a href="{{url_for('staff')}}">STAFF</a>
+          <a href="{{url_for('shrine_of_secrets')}}">SHRINE</a>
+          <a href="#">STORE</a>
+        </div>
+      </div>
+
+      <div class="navbar-right">
+        <div class="search">
+          <form action="{{ url_for('search') }}" method="get">
+            <input type="text" name="query" id="search-bar" placeholder="Search for a player">
+            <span class="underline"></span>
+          </form>
+        </div>
+        <div class="auth-status">
+          {% if session.get('user_info') %}
+          <a href="{{ url_for('profile', steam_id=session['user_info']['steamid']) }}" class="status-text"
+            style="color: green;">{{ session['user_info']['personaname'] }}</a>
+          <a href="{{ url_for('logout') }}" class="login-link">Log Out</a>
+          {% else %}
+          <p class="status-text">Currently not logged in</p>
+          <a href="{{ url_for('login') }}" class="login-link">Log In</a>
+          {% endif %}
+        </div>
+      </div>
+  </nav>
+
+
+  <script>
+    function toggleMobileNav() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('active');
+    }
+  </script>
+
+  {% block content %}{% endblock %}
+</body>
+</html>

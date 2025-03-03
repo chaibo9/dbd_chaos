@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.dbdchaos.com/staff" />
+    <meta property="og:title" content="Chaos | Staff" />
+    <meta property="og:description" content="The hardworking staff at the Chaos team!"/>
+    <meta property="og:image" content="{{ url_for('static', filename='icons/bot logo.jpg') }}"/>
+    <meta name="theme-color" content="#69359c">
+    <title>Staff | Chaos</title>
+    <link rel="icon" href="{{ url_for('static', filename='home/images/chaos-logo-t.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{url_for("static", filename="staff/staff.css")}}">
+</head>
+<body>
+    {% extends "includes/navbar.html" %}
+    {% block content %}
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='home/images/headerpic.jpeg') }}" alt="Hero Image">
+        <div class="hero-text">
+          <div class="hero-title">STAFF</div>
+        </div>
+    </div>
+
+    <!-- Container for hero image and content -->
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <a href="#owner">OWNER</a>
+            <a href="#developer">DEVELOPER</a>
+            <a href="#manager">MANAGER</a>
+            <a href="#admin">ADMIN</a>
+            <a href="#moderator">MODERATOR</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="staff-sections">
+                {% for role, members in staff_members.items() %}
+                <div class="section {{ role|lower }}" id="{{ role|lower }}">
+                    <h2>{{ role|upper }}</h2>
+                    <div class="staff-container">
+                        {% for member in members %}
+                        <a href = "{{url_for('profile', steam_id=member['steam_id'])}}" class="profile-link">
+                            <div class="profile">
+                                <img src="{{ member['profile_image'] or 'https://via.placeholder.com/100' }}" alt="Staff Profile">
+                                <div class="profile-name">{{ member['username'] }}</div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>

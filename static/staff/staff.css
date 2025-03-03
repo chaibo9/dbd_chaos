@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #14161B;
+    color: #fff;
+}
+
+/* Hero Image Styles */
+.hero-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    filter: brightness(50%);
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 200px;
+    background-color: #111216;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: grey;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar a:hover {
+    color: white;
+}
+
+.sidebar a[href="#owner"]:hover {
+    background-color: red;
+}
+
+.sidebar a[href="#developer"]:hover {
+    background-color: rgb(0, 204, 255);
+}
+
+.sidebar a[href="#manager"]:hover {
+    background-color: red;
+}
+
+.sidebar a[href="#admin"]:hover {
+    background-color: lightcoral;
+}
+
+.sidebar a[href="#moderator"]:hover {
+    background-color: purple;
+}
+
+/* Main content area */
+.content {
+    flex-grow: 1;
+    margin-left: 40px;
+    padding-left: 40px;
+}
+
+/* Role sections */
+.section {
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    font-weight: 800;
+    padding: 15px 30px;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Example styles in staff.css */
+.owner h2 {
+    border-left: 10px solid #ff0000; 
+}
+
+.developer h2 {
+    border-left: 10px solid rgb(0, 204, 255); 
+}
+
+.manager h2 {
+    border-left: 10px solid #ff0000; 
+}
+
+.admin h2 {
+    border-left: 10px solid lightcoral;
+}
+
+.moderator h2 {
+    border-left: 10px solid purple;
+}
+
+/* Staff profile styling */
+.staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile {
+    background-color: transparent;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.profile-name {
+    margin-top: 10px;
+    font-size: 16px;
+}
