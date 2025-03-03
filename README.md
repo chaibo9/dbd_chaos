@@ -36,7 +36,7 @@ You require your own keys to connect to the Steam API and for the discord bot, w
 
 ## Preview
 > [!WARNING]  
-> For the 4th image, the project did not load all 4 perks due to the game having 2 **new perks** that were not in my database.
+> For the 3rd image, the project did not load all 4 perks due to the game having 2 **new perks** that were not in my database.
 <p align="center">
   <img src ="https://github.com/chaibo9/dbd_chaos/blob/master/static/md_images_github/image1.png" width="90%">
   <img src ="https://github.com/chaibo9/dbd_chaos/blob/master/static/md_images_github/image2.png" width="90%">
