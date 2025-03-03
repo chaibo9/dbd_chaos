@@ -27,7 +27,7 @@ The `requirements.txt` file contains all the python libraries that are dependent
 ```
 pip install -r requirements.txt
 ```
-You require your own keys to connect to the Steam API and for the discord bot, which can be found under `STEAM_API_KEY` and `BOT_DISCORD`.
+You require your own keys to connect to the Steam API and for the discord bot, which can be found under `STEAM_API_KEY` and `BOT_DISCORD`. Any left over keys in the history or currently in the program will not work as they have been revoked.
 
 ## Acknowledgements
 
